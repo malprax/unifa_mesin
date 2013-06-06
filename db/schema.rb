@@ -11,20 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130606093506) do
-
-  create_table "goris", :force => true do |t|
-    t.string   "judul"
-    t.text     "isi"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130606221226) do
 
   create_table "pages", :force => true do |t|
     t.string   "judul"
     t.text     "isi"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "permalink"
   end
 
 end

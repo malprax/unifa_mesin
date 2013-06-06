@@ -27,7 +27,7 @@ class PagesController < ApplicationController
   def update
     @page = Page.find(params[:id])
     
-    if @page = Page.update_attributes(params[:page])
+    if @page.update_attributes(params[:page])
       redirect_to(@page, :notice => 'Page was successfully updated.')
     else
       render 'edit'
