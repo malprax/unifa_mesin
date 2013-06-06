@@ -1,5 +1,6 @@
 Unifa::Application.routes.draw do
   resources :pages
+  get ':id', to: 'pages#show', as: :page
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

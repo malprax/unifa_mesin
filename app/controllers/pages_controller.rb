@@ -17,15 +17,15 @@ class PagesController < ApplicationController
   end
   
   def show
-    @page = Page.find(params[:id])
+    @page = Page.find_by_permalink!(params[:id])
   end
   
   def edit
-    @page = Page.find(params[:id])
+    @page = Page.find_by_permalink!(params[:id])
   end
   
   def update
-    @page = Page.find(params[:id])
+    @page = Page.find_by_permalink!(params[:id])
     
     if @page.update_attributes(params[:page])
       redirect_to(@page, :notice => 'Page was successfully updated.')
@@ -35,7 +35,7 @@ class PagesController < ApplicationController
   end
   
   def destroy    
-    @page = Page.find(params[:id])
+    @page = Page.find_by_permalink!(params[:id])
     @page.destroy
     redirect_to pages_path
   end
