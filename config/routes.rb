@@ -1,6 +1,8 @@
 Unifa::Application.routes.draw do
+  get "home/index"
+
   resources :pages
-  root :to => 'pages#index'
+  root :to => 'home#index'
   #get ':id', to: 'pages#show', as: :page
 
   # The priority is based upon order of creation:
