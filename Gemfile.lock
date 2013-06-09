@@ -31,6 +31,7 @@ GEM
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
+    cancan (1.6.10)
     ckeditor_rails (4.1.2)
       railties (>= 3.0)
     coffee-rails (3.2.2)
@@ -130,6 +131,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  cancan
   ckeditor_rails
   coffee-rails (~> 3.2.1)
   devise

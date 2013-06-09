@@ -24,6 +24,7 @@ group :assets do
   gem "twitter-bootstrap-rails"
   gem 'ckeditor_rails'
   gem 'devise'
+  gem 'cancan'
   
 end
 
