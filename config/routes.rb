@@ -1,11 +1,15 @@
 Unifa::Application.routes.draw do
+  
+  resources :matakuliahs
+  
   devise_for :views
-
   devise_for :users
 
   get "home/index"
 
-  resources :pages
+  resources :pages do
+    resources :matakuliahs
+  end
   root :to => 'home#index'
   #get ':id', to: 'pages#show', as: :page
 
