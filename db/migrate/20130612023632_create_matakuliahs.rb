@@ -6,7 +6,7 @@ class CreateMatakuliahs < ActiveRecord::Migration
       t.integer :teori
       t.integer :lab
       t.integer :semester
-      t.boolean :mata_kuliah_pilihan, default: false
+      t.boolean :mata_kuliah_pilihan, default: tidak
 
       t.timestamps
     end

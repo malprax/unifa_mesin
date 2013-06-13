@@ -15,4 +15,24 @@ class MatakuliahsController < ApplicationController
     end
   end
   
+  def edit
+    @matakuliah = Matakuliah.find(params[:id])
+    
+  end
+  
+  def update
+    @matakuliah = Matakuliah.find(params[:id])
+    if @matakuliah.update_attributes(params[:matakuliah])
+      redirect_to matakuliahs_path, :notice => 'Page was successfully updated.'
+    else
+      render 'edit'
+    end
+  end
+  
+  def destroy
+    @page = Page.find(params[:id])
+    @page.destroy
+    redirect_to matakuliahs_path
+  end
+  
 end

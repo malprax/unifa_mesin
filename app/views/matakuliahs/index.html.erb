@@ -1,25 +1,31 @@
-<h3>Index Mata Kuliah</h3>
+<h3><center>Mata Kuliah Kurikulum 2011</center></h3>
 
 <table class="table">
    <tr>
       <th>No</th>
       <th>Kode</th>
       <th>Mata Kuliah</th>
-      <th>Teori</th>
-      <th>Lab</th>
-      <th>Jumlah SKS</th>
+      <th>Teori(sks)</th>
+      <th>Lab(sks)</th>
+      <th>Jumlah(sks)</th>
       <th>Semester</th>
       <th>Mata Kuliah Pilihan</th>
       
   </tr>
+   <% Matakuliah.all.each_with_index do |m,i| %>
   <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><%= i + 1%></td>
+      <td><%= m.kode%></td>
+      <td><%= m.mata_kuliah%></td>
+      <td><center><%= m.teori%></center></td>
+      <td><center><%= m.lab %></center></td>
+      <td><center><%= m.teori + m.lab %></center></td>
+      <td><center><%= m.semester %></center></td>
+      <td><center><%= m.mata_kuliah_pilihan %></center></td>      
+      <td><%= link_to 'Edit', edit_matakuliah_path(m) %></td>
+      <td><%= link_to 'Destroy', page_path(m),
+                      method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    
   </tr>
+  <% end %>
 </table>

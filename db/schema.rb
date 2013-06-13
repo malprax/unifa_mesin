@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130612023632) do
+ActiveRecord::Schema.define(:version => 20130613133713) do
 
   create_table "matakuliahs", :force => true do |t|
     t.string   "mata_kuliah"
@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(:version => 20130612023632) do
     t.integer  "teori"
     t.integer  "lab"
     t.integer  "semester"
-    t.boolean  "mata_kuliah_pilihan", :default => false
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.boolean  "mata_kuliah_pilihan"
   end
 
   create_table "pages", :force => true do |t|
