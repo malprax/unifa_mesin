@@ -4,7 +4,7 @@ Unifa::Application.routes.draw do
   
   
   
-  match '/sejarahsingkat' => 'pages#show', :defaults => { :id => '1' } 
+  match '/sejarahsingkat' => 'pages#show', :defaults => { :id => '7' } 
   match '/katapengantar' => 'pages#show', :defaults => { :id => '2' } 
   match '/visidanmisi' => 'pages#show', :defaults => { :id => '3' } 
   match '/penelitiandankeahlian' => 'pages#show', :defaults => { :id => '5' }
