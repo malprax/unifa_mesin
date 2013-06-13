@@ -17,9 +17,9 @@
             <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profil<b class="caret"></b></a>
             <ul class="dropdown-menu">
-                <li><%= link_to "Sejarah Singkat", page_path(1)%></li>
-                <li><%= link_to "Kata Pengantar", page_path(2) %></li>
-                <li><%= link_to "Visi dan Misi", page_path(3) %></li>                     
+                <li><%= link_to "Sejarah Singkat", sejarahsingkat_path %></li>
+                <li><%= link_to "Kata Pengantar", katapengantar_path %></li>
+                <li><%= link_to "Visi dan Misi", visidanmisi_path %></li>                     
             </ul>
             </li>
         </ul>   
@@ -42,10 +42,11 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mahasiswa<b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <!-- links -->
-                <li><%=link_to "Penelitian Dan Keahlian", page_path(5) %></li>
+                <li><%=link_to "Penelitian Dan Keahlian", penelitiandankeahlian_path %></li>
                 <li><%=link_to "Beasiswa Mahasiswa", "#"%></li>
                 <li><%=link_to "Prestasi", "#" %></li>
-                <li><%=link_to "Jadwal Kuliah", page_path(6) %></li>
+                <li><%=link_to "Mata Kuliah", "#" %></li>
+                <li><%=link_to "Jadwal Kuliah", "#" %></li>
                 <li><%=link_to "Himpunan Mahasiswa Mesin", "#" %></li>                
             </ul>
             </li>

@@ -1,15 +1,21 @@
 Unifa::Application.routes.draw do
-  
   resources :matakuliahs
+  
+  
+  
+  
+  match '/sejarahsingkat' => 'pages#show', :defaults => { :id => '1' } 
+  match '/katapengantar' => 'pages#show', :defaults => { :id => '2' } 
+  match '/visidanmisi' => 'pages#show', :defaults => { :id => '3' } 
+  match '/penelitiandankeahlian' => 'pages#show', :defaults => { :id => '5' }
+  
   
   devise_for :views
   devise_for :users
 
   get "home/index"
 
-  resources :pages do
-    resources :matakuliahs
-  end
+  resources :pages 
   root :to => 'home#index'
   #get ':id', to: 'pages#show', as: :page
 
