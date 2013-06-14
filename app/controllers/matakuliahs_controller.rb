@@ -9,7 +9,7 @@ class MatakuliahsController < ApplicationController
   def create
     @matakuliah = Matakuliah.new(params[:matakuliah])
     if @matakuliah.save
-      redirect_to matakuliahs_path, :notice => 'Page was successfully created.'     
+      redirect_to matakuliahs_path, :notice => 'Mata Kuliah Berhasil Dibuat.'     
     else
       render "new"
     end
@@ -23,16 +23,16 @@ class MatakuliahsController < ApplicationController
   def update
     @matakuliah = Matakuliah.find(params[:id])
     if @matakuliah.update_attributes(params[:matakuliah])
-      redirect_to matakuliahs_path, :notice => 'Page was successfully updated.'
+      redirect_to matakuliahs_path, :notice => 'Mata Kuliah Berhasil Diperbaharui.'
     else
       render 'edit'
     end
   end
   
   def destroy
-    @page = Page.find(params[:id])
-    @page.destroy
-    redirect_to matakuliahs_path
+    @matakuliah = Matakuliah.find(params[:id])
+    @matakuliah.destroy
+    redirect_to matakuliahs_path, :notice => 'Mata Kuliah Berhasil Dihapus.'
   end
   
 end
