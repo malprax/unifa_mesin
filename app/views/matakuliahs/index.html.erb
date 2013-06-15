@@ -23,7 +23,7 @@
       <td><center><%= m.semester %></center></td>
       <td><center><%= m.mata_kuliah_pilihan %></center></td>      
       <td><%= link_to 'Edit', edit_matakuliah_path(m) %></td>
-      <td><%= link_to 'Destroy', matakuliah_path(m), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Hapus', matakuliah_path(m), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     
   </tr>
   <% end %>
