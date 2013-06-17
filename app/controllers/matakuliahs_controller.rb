@@ -1,4 +1,5 @@
 class MatakuliahsController < ApplicationController
+  before_filter :authenticate_user!
   def index
     @matakuliah = Matakuliah.all
   end
