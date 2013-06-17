@@ -12,7 +12,7 @@
   <% @pages.each do |page| %>
   <tr>
     <td><%= page.judul %></td>
-    <td><%= page.isi %></td>
+    <td><%= raw page.isi %></td>
     <td><%= link_to 'Show', page_path(page) %></td>
     <td><%= link_to 'Edit', edit_page_path(page) %></td>
     <td><%= link_to 'Destroy', page_path(page),method: :delete, data: { confirm: 'Are you sure?' } %></td>
