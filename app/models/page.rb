@@ -1,5 +1,5 @@
 class Page < ActiveRecord::Base
-  attr_accessible :isi, :judul, :permalink
+  attr_accessible :isi, :judul
   validates :judul,  :presence => true
   validates :isi, :presence => true,:length => { :minimum => 5 }  
   
