@@ -1,8 +1,6 @@
 Unifa::Application.routes.draw do
   resources :matakuliahs
-  
-  
-  
+   
   
   match '/sejarahsingkat' => 'pages#show', :defaults => { :id => '7' } 
   match '/katapengantar' => 'pages#show', :defaults => { :id => '2' } 
