@@ -1,16 +1,30 @@
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  
-  <div class="field"><%= f.label :username %><br />
-  <%= f.text_field :username %></div>  
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+<div class="row-fluid">
+  <div class="span12">
+    <div class="span4"></div>
+    <div class="span4">
+      
+        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>  
+        <div class="field">
+            <%= f.label :username %><br />
+            <%= f.text_field :username %>
+        </div>  
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+        <div>
+            <%= f.label :password %><br />
+            <%= f.password_field :password %>
+        </div>
 
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
+        <% if devise_mapping.rememberable? -%>
+        <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+        <% end -%>
 
-<%= render "devise/shared/links" %>
+        <div><%= f.submit "Login" %></div>
+        <% end %>
+
+        <%= render "devise/shared/links" %>
+    </div>
+    <div class="span4"></div>
+  </div>
+</div>
+

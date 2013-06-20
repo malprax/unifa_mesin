@@ -9,7 +9,9 @@ Unifa::Application.routes.draw do
   
   
   devise_for :views
-  devise_for :users
+  devise_for :users,  :path => '',:path_names => { :sign_up => "daftar", :sign_in => "login"  }
+  
+  
 
   get "home/index"
 
