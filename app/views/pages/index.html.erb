@@ -1,4 +1,4 @@
-<h1>Halaman Index</h1>
+<h1>Index Halaman</h1>
 
 <table class="table">
   <tr>
@@ -22,5 +22,5 @@
 <% end %>
 </table>
 <%if user_signed_in?%>
-  <%= link_to 'buat baru', new_page_path %>
+  <%= link_to '<i class="icon-pencil"></i> buat baru '.html_safe, new_page_path %>
 <%end%>

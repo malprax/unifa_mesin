@@ -30,8 +30,8 @@ en:
       no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
       send_instructions: "You will receive an email with instructions about how to reset your password in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
-      updated: "Your password was changed successfully. You are now signed in."
-      updated_not_active: "Your password was changed successfully."
+      updated: "Password Anda Berhasil Diubah. Sekarang Anda Telah Login."
+      updated_not_active: "Password Anda Berhasil Diubah."
     registrations:
       destroyed: "Bye! Your account was successfully cancelled. We hope to see you again soon."
       signed_up: "Selamat! Anda Berhasil Terdaftar."
@@ -42,7 +42,7 @@ en:
       updated: "Anda Berhasil Update."
     sessions:
       signed_in: "Login Berhasil."
-      signed_out: "logout Berhasil."
+      signed_out: "Logout Berhasil."
     unlocks:
       send_instructions: "Anda Akan Menerima Email Instruksi Bagaimana Cara Unlock Akun Anda Dalam Beberapa Menit."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."

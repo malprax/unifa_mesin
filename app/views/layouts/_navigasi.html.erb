@@ -10,7 +10,7 @@
       <div class="container-fluid nav-collapse">
         <!-- .nav, .navbar-search, .navbar-form, etc -->
         <ul class="nav nav-pills ">
-            <li><%=link_to "Beranda", root_url%></li>           
+            <li><%=link_to '<i class="icon-home"></i> Beranda'.html_safe, root_url%></li>           
         </ul>                
 
         <ul class="nav nav-pills">
@@ -29,9 +29,12 @@
             <ul class="dropdown-menu">
                 <!-- links -->
                 <li><%=link_to "Staf Dosen", "#" %></li>
-                <li><%=link_to "Beasiswa Dosen", "#"%></li>
+                <li ><%=link_to "Beasiswa Dosen", "#"%></li>        
+                
                 <li><%=link_to "Hibah Penelitian", "#" %></li>  
-                <li><%=link_to "Panduan Sertifikasi", "#"%></li>              
+                <li><%=link_to "Panduan Sertifikasi", panduansertifikasi_path %></li> 
+                <li><%=link_to "Garis Besar Pengajaran", "#" %></li>  
+                 <li><%=link_to "Satuan Acara Pengajaran", "#" %></li>               
             </ul>
             </li>
         </ul> 

@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   def create
     @page = Page.new(params[:page])
     if @page.save
-      redirect_to(@page, :notice => 'Page was successfully created.') 
+      redirect_to(@page, :notice => 'Halaman Berhasil Dibuat.') 
     else
       render "new"
     end
@@ -29,7 +29,7 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
     
     if @page.update_attributes(params[:page])
-      redirect_to(@page, :notice => 'Page was successfully updated.')
+      redirect_to(@page, :notice => 'Halaman Berhasil Di Update.')
     else
       render 'edit'
     end

@@ -4,7 +4,8 @@
     <div class="span4"></div>
     <div class="span4">
       
-        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>  
+        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %> 
+        <form class="form-signin"> 
         <div class="field">
             <%= f.label :username %><br />
             <%= f.text_field :username %>
@@ -23,6 +24,7 @@
         <% end %>
 
         <%= render "devise/shared/links" %>
+      </form>
     </div>
     <div class="span4"></div>
   </div>
