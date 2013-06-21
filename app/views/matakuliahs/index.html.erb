@@ -24,11 +24,11 @@
       <td><center><%= m.mata_kuliah_pilihan %></center></td> 
       <%if user_signed_in? %>     
       <td><%= link_to 'Edit', edit_matakuliah_path(m) %></td>
-      <td><%= link_to 'Hapus', matakuliah_path(m), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to '<i class="icon-trash"></i>'.html_safe, matakuliah_path(m), method: :delete, title: "Hapus", data: { tooltip: true, confirm: 'Are you sure?' } %></td>
       <%end%>
   </tr>
-  <% end %>
+  <% end %>     
 </table>
 <%if user_signed_in? %>   
-<%= link_to 'Tambah Mata Kuliah', new_matakuliah_path %>
+<%= link_to '<i class="icon-plus"></i> Tambah Mata Kuliah'.html_safe, new_matakuliah_path %>
 <%end%>
