@@ -259,3 +259,24 @@ vendor
   External libraries that the application depends on. Also includes the plugins
   subdirectory. If the app has frozen rails, those gems also go here, under
   vendor/rails/. This directory is in the load path.
+  
+  125.162.208.35 ==> 2008 kbps
+  255.255.255.255
+  125.162.208.1
+
+
+  110.136.245.142 ==> 832 kbps
+  255.255.255.255
+  110.136.240.1
+
+  	180.251.174.133 == > max rate downstream 736 kbps
+    255.255.255.255
+    180.251.160.1
+  
+    36.83.106.11 ==> max rate 832 Downstream kbps
+    255.255.255.255
+    36.83.96.1
+  
+    36.83.96.130
+    255.255.255.255
+    36.83.96.1 ==> max rate 608 DOwnstream kbps

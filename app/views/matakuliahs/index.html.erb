@@ -29,7 +29,9 @@
   </tr>
   <% end %>     
 </table>
-<%if user_signed_in? %>   
-<%= link_to '<i class="icon-plus"></i> Tambah Mata Kuliah'.html_safe, new_matakuliah_path %>
+<%if user_signed_in? %>
+  <% if can? :create, Matakuliah %>
+    <%= link_to '<i class="icon-plus"></i> Tambah Mata Kuliah'.html_safe, new_matakuliah_path %>
+  <% end %>
 <%end%>
 <hr>

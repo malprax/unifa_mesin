@@ -5,6 +5,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
+        
       </a>
       <a class="brand">Teknik Mesin Unifa</a>
       <div class="container-fluid nav-collapse">
@@ -20,7 +21,7 @@
                 <!-- links -->
                 <li><%=link_to "Staf Dosen", "#" %></li>
                 <li ><%=link_to "Beasiswa Dosen", "#"%></li>        
-                
+                <li><%=link_to "Mata Kuliah", matakuliahs_path %></li>
                 <li><%=link_to "Hibah Penelitian", "#" %></li>  
                 <li><%=link_to "Panduan Sertifikasi", panduansertifikasi_path %></li> 
                 <li><%=link_to "Garis Besar Pengajaran", "#" %></li>  
@@ -37,8 +38,8 @@
                 <li><%=link_to "Penelitian Dan Keahlian", penelitiandankeahlian_path %></li>
                 <li><%=link_to "Beasiswa Mahasiswa", "#"%></li>
                 <li><%=link_to "Prestasi", "#" %></li>
-                <li><%=link_to "Mata Kuliah", matakuliahs_path %></li>
-                <li><%=link_to "Jadwal Kuliah", "#" %></li>
+                 <li><%=link_to "KRS Online", "#" %></li>                
+                <li><%=link_to "Jadwal Kuliah", "#" %></li>                
                 <li><%=link_to "Himpunan Mahasiswa Mesin", "#" %></li>                
             </ul>
             </li>
@@ -66,7 +67,7 @@
                 <li >
                     <%= link_to 'Edit Profil', edit_user_registration_path %>                        
                 <li>
-                <li class= "nav-tabs active"><%= link_to '<i class="icon-off"></i>'.html_safe, destroy_user_session_path, method: :delete, title: "Logout", data: {tooltip: true} %>   
+                <li class= "nav-tabs active"><%= link_to raw('<i class="icon-off"></i>'), destroy_user_session_path, method: :delete, title: "Logout", data: {tooltip: true} %>   
                 <li>            
 
                 <% else %>
@@ -74,7 +75,7 @@
                     <%= link_to "Daftar", new_user_registration_path %>                   
                 <li>
                 <li >
-                    <%= link_to '<i class="icon-off"></i>'.html_safe, new_user_session_path, title: "Login", data: {tooltip: true}  %>
+                    <%= link_to raw('<i class="icon-off"></i>'), new_user_session_path, title: "Login", data: {tooltip: true}  %>
                 </li>
                 <% end %>
         </ul> 
