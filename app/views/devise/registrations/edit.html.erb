@@ -19,21 +19,129 @@
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
 
-        <div><%= f.label :password %> <i>(biarkan kosong jika tidak ingin mengubah)</i><br />
+        <div><%= f.label :password, "Password baru" %> <i>(biarkan kosong jika tidak ingin mengubah)</i><br />
         <%= f.password_field :password, :autocomplete => "off" %></div>
 
-        <div><%= f.label :password_confirmation %><br />
+        <div><%= f.label :password_confirmation, "Konfirmasi Password Baru" %><br />
         <%= f.password_field :password_confirmation %></div>
 
-        <div><%= f.label :current_password %> <i>(kami butuh password anda untuk konfirmasi perubahan)</i><br />
+        <div><%= f.label :current_password, "Password Lama" %> <i>(kami butuh password anda untuk konfirmasi perubahan)</i><br />
         <%= f.password_field :current_password %></div>
+        
+        <div><%= f.label :nama, "Nama" %><br />
+        <%= f.password_field :nama %></div>
+        
+        <div><%= f.label :nama_panggilan, "Nama Panggilan" %><br />
+        <%= f.password_field :nama_panggilan %></div>
+        
+        <div><%= f.label :nim, "Nomor Induk Mahasiswa" %><br />
+        <%= f.password_field :nim %></div>
+        
+        <div><%= f.label :tempat_lahir, "Tempat Lahir" %><br />
+        <%= f.password_field :tempat_lahir %></div>
+        
+        <div><%= f.label :tanggal_lahir, "Tanggal Lahir" %><br />
+        <%= f.password_field :tanggal_lahir %></div>
+        
+        <div><%= f.label :jenis_kelamin, "Jenis Kelamin" %><br />
+        <%= f.password_field :jenis_kelamin %></div>
+        
+        <div><%= f.label :jumlah_saudara, "Jumlah Saudara" %><br />
+        <%= f.password_field :password_confirmation %></div>
+        
+        <div><%= f.label :status_pernikahan, "Status Pernikahan" %><br />
+        <%= f.password_field :status_pernikahan %></div>
+        
+        <div><%= f.label :agama, "Agama" %><br />
+        <%= f.password_field :agama %></div>
+        
+        <div><%= f.label :status, "Status" %><br />
+        <%= f.password_field :status %></div>
+        
+        <div><%= f.label :warga_negara, "Warga Negara" %><br />
+        <%= f.password_field :warga_negara %></div>
+        
+        <div><%= f.label :suku, "Suku" %><br />
+        <%= f.password_field :suku %></div>
+        
+        <div><%= f.label :alamat, "Alamat" %><br />
+        <%= f.password_field :alamat %></div>
+        
+        <div><%= f.label :telepon_rumah, "Telepon Rumah" %><br />
+        <%= f.password_field :telepon_rumah %></div>
+        
+        <div><%= f.label :telepon_seluler, "Telepon Seluler" %><br />
+        <%= f.password_field :telepon_seluler %></div>
+        
+        <div><%= f.label :kota, "Kota" %><br />
+        <%= f.password_field :kota %></div>
+        
+        <div><%= f.label :provinsi, "Provinsi" %><br />
+        <%= f.password_field :provinsi %></div>
+        
+        <div><%= f.label :nama_ayah, "Nama Ayah" %><br />
+        <%= f.password_field :nama_ayah %></div>
+        
+        <div><%= f.label :nama_ibu, "Nama Ibu" %><br />
+        <%= f.password_field :nama_ibu %></div>
+        
+        <div><%= f.label :pendidikan_ayah, "Pendidikan Ayah" %><br />
+        <%= f.password_field :pendidikan_ayah %></div>
+        
+        <div><%= f.label :pendidikan_ibu, "Pendidikan Ibu" %><br />
+        <%= f.password_field :pendidikan_ibu %></div>
+        
+        <div><%= f.label :pekerjaan_ayah, "Pekerjaan Ayah" %><br />
+        <%= f.password_field :pekerjaan_ayah %></div>
+        
+        <div><%= f.label :alamat_orang_tua, "Alamat Orangtua" %><br />
+        <%= f.password_field :alamat_orang_tua %></div>
+        
+        <div><%= f.label :kota_orang_tua, "Kota Orangtua" %><br />
+        <%= f.password_field :kota_orang_tua %></div>
+        
+        <div><%= f.label :provinsi_orang_tua, "Provinsi Orangtua" %><br />
+        <%= f.password_field :provinsi_orang_tua %></div>
+        
+        <div><%= f.label :telepon_rumah_orang_tua, "Telepon Rumah Orangtua" %><br />
+        <%= f.password_field :telepon_rumah_orang_tua %></div>
+        
+        <div><%= f.label :telepon_seluler_orang_tua, "Telepon Seluler" %><br />
+        <%= f.password_field :telepon_seluler_orang_tua %></div>
+        
+        <div><%= f.label :penghasilan_orang_tua, "Penghasilan Orangtua" %><br />
+        <%= f.password_field :penghasilan_orang_tua %></div>
+        
+        <div><%= f.label :sekolah_menengah_atas, "Sekolah Menengah Atas(SMA)/ Kejuruan (SMK)" %><br />
+        <%= f.password_field :sekolah_menengah_atas %></div>
+        
+        <div><%= f.label :tahun_lulus_sma, "Tahun Lulus SMA" %><br />
+        <%= f.password_field :tahun_lulus_sma %></div>
+        
+        <div><%= f.label :sekolah_menengah_pertama, "Sekolah Menengah Pertama" %><br />
+        <%= f.password_field :sekolah_menengah_pertama %></div>
+        
+        <div><%= f.label :tahun_lulus_smp, "Tahun Lulus SMP" %><br />
+        <%= f.password_field :tahun_lulus_smp %></div>
+        
+        <div><%= f.label :sekolah_dasar, "Sekolah Dasar" %><br />
+        <%= f.password_field :sekolah_dasar %></div>
+        
+        <div><%= f.label :tahun_lulus_sd, "Tahun Lulus SD" %><br />
+        <%= f.password_field :tahun_lulus_sd %></div>
+        
+        <div><%= f.label :taman_kanaK_kanak, "Taman Kanak - Kanak" %><br />
+        <%= f.password_field :taman_kanak_kanak %></div>
+        
+        <div><%= f.label :tahun_lulus_taman_kanak_kanak, "Tahun Lulus Taman Kanak Kanak" %><br />
+        <%= f.password_field :tahun_lulus_taman_kanak_kanak %></div>
 
         <div><%= f.submit "Update" %></div>
       <% end %>      
 
       <p>Non-Aktif? <%= button_to "Non-Aktif kan akun saya", registration_path(resource_name), :data => { :confirm => "Anda Yakin?" }, :method => :delete %></p>
 
-      <%= link_to "Kembali", :back %>
+      <%= link_to   '<i class="icon-chevron-left"></i> Kembali'.html_safe, :back %>
     </div>
     <div class="span4"></div>
   </div>

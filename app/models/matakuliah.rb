@@ -3,3 +3,4 @@ class Matakuliah < ActiveRecord::Base
   validates :kode,  :presence => true
   validates :mata_kuliah,  :presence => true  
 end
+

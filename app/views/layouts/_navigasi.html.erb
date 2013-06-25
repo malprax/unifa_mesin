@@ -38,8 +38,8 @@
                 <li><%=link_to "Penelitian Dan Keahlian", penelitiandankeahlian_path %></li>
                 <li><%=link_to "Beasiswa Mahasiswa", "#"%></li>
                 <li><%=link_to "Prestasi", "#" %></li>
-                 <li><%=link_to "KRS Online", "#" %></li>                
-                <li><%=link_to "Jadwal Kuliah", "#" %></li>                
+                 <li><%=link_to "KRS Online", krsonline_path %></li>                
+                <li><%=link_to "Menu Kuliah Persemester", "#" %></li>                
                 <li><%=link_to "Himpunan Mahasiswa Mesin", "#" %></li>                
             </ul>
             </li>
@@ -63,7 +63,7 @@
         <ul class="nav nav-pills pull-right">        
                 <% if user_signed_in? %>
                 
-                <li > <%= link_to current_user.email %> </li>
+                <li > <%= link_to current_user.email, root_url %> </li>
                 <li >
                     <%= link_to 'Edit Profil', edit_user_registration_path %>                        
                 <li>

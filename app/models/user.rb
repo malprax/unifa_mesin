@@ -10,4 +10,12 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   validates_presence_of :username
   belongs_to :role
+  
+  def checkbiodata
+    if nama.blank?
+      return true
+    else
+      return false
+    end
+  end
 end

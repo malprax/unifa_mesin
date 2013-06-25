@@ -2,13 +2,11 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    user ||= User.new
-    user.role_id = 2
-    user.save
+    user ||= User.new   
     
     if user.role_id == 1
       can :manage, :all
-    elsif user.role_id == 2
+    else user.role_id == 2
       can :read, :all
     end
     # Define abilities for the passed in user here. For example:

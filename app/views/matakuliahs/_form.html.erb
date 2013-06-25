@@ -25,7 +25,7 @@
   
   <div>
     <%= m.label :mata_kuliah_pilihan, "Termasuk Mata Kuliah Pilihan?" %>
-    <%= m.select :mata_kuliah_pilihan, ['tidak','ya'] %>
+    <%= m.select :mata_kuliah_pilihan, [['tidak',false],['ya',true]] %>
   </div>
   <div>
     <%= m.submit %>
