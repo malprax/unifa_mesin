@@ -2,148 +2,78 @@
 
 <div class="row-fluid">
   <div class="span12">
-    <div class="span4"></div>
-    <div class="span4">
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
       
 
-      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-        <%= devise_error_messages! %>
-
-        <div class="field"><%= f.label :username %><br />
-          <%= f.text_field :username %></div>
-
-        <div><%= f.label :email %><br />
-        <%= f.email_field :email, :autofocus => true %></div>
-
+      <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => "form-horizontal" }) do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :username %>        
+        <%= f.input :email, :autofocus => true %>
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-        <% end %>
-
-        <div><%= f.label :password, "Password baru" %> <i>(biarkan kosong jika tidak ingin mengubah)</i><br />
-        <%= f.password_field :password, :autocomplete => "off" %></div>
-
-        <div><%= f.label :password_confirmation, "Konfirmasi Password Baru" %><br />
-        <%= f.password_field :password_confirmation %></div>
-
-        <div><%= f.label :current_password, "Password Lama" %> <i>(kami butuh password anda untuk konfirmasi perubahan)</i><br />
-        <%= f.password_field :current_password %></div>
+        <% end %>       
+        <%= f.input :password, label: "Password baru", :autocomplete => "off", hint: "(biarkan kosong jika tidak ingin mengubah)" %>        
+        <%= f.input :password_confirmation, label: "Ulangi Password baru" %>
+        <%= f.input :current_password, label: "Password Lama", hint: "(kami butuh password anda untuk konfirmasi perubahan)"%>
+      
         
-        <div><%= f.label :nama, "Nama" %><br />
-        <%= f.password_field :nama %></div>
+        <%= f.input :nama, label:"Nama"%>
+        <%= f.input :nama_panggilan, label:"Nama Panggilan"%>        
+        <%= f.input :nim, label:"Nomor induk Mahasiswa"%>
         
-        <div><%= f.label :nama_panggilan, "Nama Panggilan" %><br />
-        <%= f.password_field :nama_panggilan %></div>
+        <%= f.input :tempat_lahir, label:"Tempat Lahir"%>
+      
+        <%= f.input :tanggal_lahir, as: :date, start_year: Date.today.year - 35,
+                                      end_year: Date.today.year - 10, 
+                                      order: [:day, :month, :year] %>
+                          
+       
         
-        <div><%= f.label :nim, "Nomor Induk Mahasiswa" %><br />
-        <%= f.password_field :nim %></div>
+        <%= f.input :jenis_kelamin, label:"Jenis Kelamin"%>
+        <%= f.input :jumlah_bersaudara, label:"Jumlah Bersaudara"%>
+        <%= f.input :status_pernikahan, label:"Status Kawin"%>
+        <%= f.input :warga_negara, label:"Negara"%>
+        <%= f.input :suku, label:"Suku"%>
         
-        <div><%= f.label :tempat_lahir, "Tempat Lahir" %><br />
-        <%= f.password_field :tempat_lahir %></div>
+        <%= f.input :alamat, label:"Alamat"%>
+        <%= f.input :telepon_rumah, label:"Telepon Rumah"%>
+        <%= f.input :telepon_seluler, label:"Telepon Seluler"%>
+        <%= f.input :kota, label:"Kota"%>
+        <%= f.input :nama_ayah, label:"Nama Ayah"%>
+        <%= f.input :nama_ibu, label:"Nama Ibu"%>
+        <%= f.input :pendidikan_ayah, label:"Pendidikan Ayah"%>
+        <%= f.input :pendidikan_ibu, label:"Pendidikan Ibu"%>
+        <%= f.input :pekerjaan_ayah, label:"Pekerjaan Ayah"%>
+        <%= f.input :pekerjaan_ibu, label:"Pekerjaan Ibu"%>
+        <%= f.input :alamat_orang_tua, label:"Alamat Orang Tua"%>
+        <%= f.input :kota_orang_tua, label:"Kota Orang Tua"%>
+        <%= f.input :provinsi_orang_tua, label:"Provinsi Orang Tua"%>
+        <%= f.input :telepon_rumah_orang_tua, label:"Telepon Rumah Orang Tua"%>
+        <%= f.input :telepon_seluler_orang_tua, label:"Telepon Seluler Orang Tua"%>
+        <%= f.input :penghasilan_orang_tua, label:"Penghasilan Orang Tua"%>
+        <%= f.input :sekolah_menengah_atas, label:"Sekolah Menengah Atas (SMA)/Kejuruan (SMK)"%>
+        <%= f.input :tahun_lulus_sma, label:"Tahun Lulus SMA/SMK"%>
+        <%= f.input :sekolah_menengah_pertama, label:"Sekolah Menengah Pertama"%>
+        <%= f.input :tahun_lulus_smp, label:"Tahun Lulus SMP"%>
+        <%= f.input :sekolah_dasar, label:"Sekolah Dasar"%>
+        <%= f.input :tahun_lulus_sd, label:"Tahun Lulus SD"%>
+        <%= f.input :taman_kanak_kanak, label:"Taman Kanak Kanak"%>
+        <%= f.input :tahun_lulus_taman_kanak_kanak, label:"Tahun Lulus Taman Kanak Kanak"%>
+        <%= f.button :submit %> 
         
-        <div><%= f.label :tanggal_lahir, "Tanggal Lahir" %><br />
-        <%= f.password_field :tanggal_lahir %></div>
+       
+       
         
-        <div><%= f.label :jenis_kelamin, "Jenis Kelamin" %><br />
-        <%= f.password_field :jenis_kelamin %></div>
-        
-        <div><%= f.label :jumlah_saudara, "Jumlah Saudara" %><br />
-        <%= f.password_field :password_confirmation %></div>
-        
-        <div><%= f.label :status_pernikahan, "Status Pernikahan" %><br />
-        <%= f.password_field :status_pernikahan %></div>
-        
-        <div><%= f.label :agama, "Agama" %><br />
-        <%= f.password_field :agama %></div>
-        
-        <div><%= f.label :status, "Status" %><br />
-        <%= f.password_field :status %></div>
-        
-        <div><%= f.label :warga_negara, "Warga Negara" %><br />
-        <%= f.password_field :warga_negara %></div>
-        
-        <div><%= f.label :suku, "Suku" %><br />
-        <%= f.password_field :suku %></div>
-        
-        <div><%= f.label :alamat, "Alamat" %><br />
-        <%= f.password_field :alamat %></div>
-        
-        <div><%= f.label :telepon_rumah, "Telepon Rumah" %><br />
-        <%= f.password_field :telepon_rumah %></div>
-        
-        <div><%= f.label :telepon_seluler, "Telepon Seluler" %><br />
-        <%= f.password_field :telepon_seluler %></div>
-        
-        <div><%= f.label :kota, "Kota" %><br />
-        <%= f.password_field :kota %></div>
-        
-        <div><%= f.label :provinsi, "Provinsi" %><br />
-        <%= f.password_field :provinsi %></div>
-        
-        <div><%= f.label :nama_ayah, "Nama Ayah" %><br />
-        <%= f.password_field :nama_ayah %></div>
-        
-        <div><%= f.label :nama_ibu, "Nama Ibu" %><br />
-        <%= f.password_field :nama_ibu %></div>
-        
-        <div><%= f.label :pendidikan_ayah, "Pendidikan Ayah" %><br />
-        <%= f.password_field :pendidikan_ayah %></div>
-        
-        <div><%= f.label :pendidikan_ibu, "Pendidikan Ibu" %><br />
-        <%= f.password_field :pendidikan_ibu %></div>
-        
-        <div><%= f.label :pekerjaan_ayah, "Pekerjaan Ayah" %><br />
-        <%= f.password_field :pekerjaan_ayah %></div>
-        
-        <div><%= f.label :alamat_orang_tua, "Alamat Orangtua" %><br />
-        <%= f.password_field :alamat_orang_tua %></div>
-        
-        <div><%= f.label :kota_orang_tua, "Kota Orangtua" %><br />
-        <%= f.password_field :kota_orang_tua %></div>
-        
-        <div><%= f.label :provinsi_orang_tua, "Provinsi Orangtua" %><br />
-        <%= f.password_field :provinsi_orang_tua %></div>
-        
-        <div><%= f.label :telepon_rumah_orang_tua, "Telepon Rumah Orangtua" %><br />
-        <%= f.password_field :telepon_rumah_orang_tua %></div>
-        
-        <div><%= f.label :telepon_seluler_orang_tua, "Telepon Seluler" %><br />
-        <%= f.password_field :telepon_seluler_orang_tua %></div>
-        
-        <div><%= f.label :penghasilan_orang_tua, "Penghasilan Orangtua" %><br />
-        <%= f.password_field :penghasilan_orang_tua %></div>
-        
-        <div><%= f.label :sekolah_menengah_atas, "Sekolah Menengah Atas(SMA)/ Kejuruan (SMK)" %><br />
-        <%= f.password_field :sekolah_menengah_atas %></div>
-        
-        <div><%= f.label :tahun_lulus_sma, "Tahun Lulus SMA" %><br />
-        <%= f.password_field :tahun_lulus_sma %></div>
-        
-        <div><%= f.label :sekolah_menengah_pertama, "Sekolah Menengah Pertama" %><br />
-        <%= f.password_field :sekolah_menengah_pertama %></div>
-        
-        <div><%= f.label :tahun_lulus_smp, "Tahun Lulus SMP" %><br />
-        <%= f.password_field :tahun_lulus_smp %></div>
-        
-        <div><%= f.label :sekolah_dasar, "Sekolah Dasar" %><br />
-        <%= f.password_field :sekolah_dasar %></div>
-        
-        <div><%= f.label :tahun_lulus_sd, "Tahun Lulus SD" %><br />
-        <%= f.password_field :tahun_lulus_sd %></div>
-        
-        <div><%= f.label :taman_kanaK_kanak, "Taman Kanak - Kanak" %><br />
-        <%= f.password_field :taman_kanak_kanak %></div>
-        
-        <div><%= f.label :tahun_lulus_taman_kanak_kanak, "Tahun Lulus Taman Kanak Kanak" %><br />
-        <%= f.password_field :tahun_lulus_taman_kanak_kanak %></div>
-
-        <div><%= f.submit "Update" %></div>
       <% end %>      
 
       <p>Non-Aktif? <%= button_to "Non-Aktif kan akun saya", registration_path(resource_name), :data => { :confirm => "Anda Yakin?" }, :method => :delete %></p>
 
-      <%= link_to   '<i class="icon-chevron-left"></i> Kembali'.html_safe, :back %>
+      <%= link_to   '<i class="icon-chevron-left"></i> Kembali'.html_safe, root_url %>
     </div>
-    <div class="span4"></div>
+    <div class="span2"></div>
+  </div>
   </div>
 </div>
 <hr>
