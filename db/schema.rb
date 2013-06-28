@@ -11,7 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130623214313) do
+ActiveRecord::Schema.define(:version => 20130624093719) do
+
+  create_table "instruksional_khusus", :force => true do |t|
+    t.string   "kode_matakuliah_id"
+    t.text     "tujuan_ik"
+    t.text     "pokok_bahasan"
+    t.text     "subpokok_bahasan"
+    t.string   "estimasi_waktu"
+    t.string   "bahan_bacaan"
+    t.string   "pertemuan"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "instruksional_umums", :force => true do |t|
+    t.string   "kode_matakuliah_id"
+    t.text     "deskripsi_iu"
+    t.text     "tujuan_iu"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
 
   create_table "matakuliahs", :force => true do |t|
     t.string   "mata_kuliah"
