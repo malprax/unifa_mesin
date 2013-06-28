@@ -27,7 +27,7 @@
       
         <%= f.input :tanggal_lahir, as: :date, start_year: Date.today.year - 35,
                                       end_year: Date.today.year - 10, 
-                                      order: [:day, :month, :year] %>
+                                      order: [:day, :month, :year], prompt: true %>
                           
        
         
