@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130624093719) do
+ActiveRecord::Schema.define(:version => 20130629232153) do
+
+  create_table "artikels", :force => true do |t|
+    t.string   "nama"
+    t.text     "isi"
+    t.string   "penulis"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "instruksional_khusus", :force => true do |t|
     t.string   "kode_matakuliah_id"

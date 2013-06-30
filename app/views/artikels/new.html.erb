@@ -1,2 +1,6 @@
 <h1>Artikels#new</h1>
-<p>Find me in app/views/artikels/new.html.erb</p>
+<% simple_form @article do |f| %>
+<%= f.input :nama %>
+<%= f.input :isi %>
+<%= f.input :penulis %>
+<%end%>
