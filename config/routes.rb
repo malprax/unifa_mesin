@@ -37,9 +37,11 @@ Unifa::Application.routes.draw do
   resources :krs_onlines
   match '/krsonline' => 'krs_onlines#index'
   
-  match '/penelitiandankeahlian' => 'pages#show', :defaults => { :id => '5' }
+  match '/penelitianmahasiswa' => 'pages#show', :defaults => { :id => '5' }
+  match '/penelitiandosen' => 'pages#show', :defaults => { :id => '12' }
   match '/panduansertifikasi' => 'pages#show', :defaults => { :id => '11' }
   match '/indexhalaman' => 'pages#index'
+  
   
   
   

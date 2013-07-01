@@ -1,5 +1,6 @@
 class BeritasController < ApplicationController
   def index
+   
   end
 
   def new
