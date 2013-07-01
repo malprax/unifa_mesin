@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  load_and_authorize_resource
   def index
     @articles = Article.all
   end
@@ -40,9 +41,6 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @article.destroy
     redirect_to articles_path    
-  end
-  
-  
-  
+  end 
   
 end

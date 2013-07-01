@@ -12,7 +12,7 @@ Unifa::Application.routes.draw do
   match '/krsonline' => 'krs_onlines#index'
   
   match '/penelitianmahasiswa' => 'pages#show', :defaults => { :id => '5' }
-  match '/penelitiandosen' => 'pages#show', :defaults => { :id => '12' }
+  match '/penelitiandosen' => 'pages#show', :defaults => { :id => '13' }
   match '/panduansertifikasi' => 'pages#show', :defaults => { :id => '11' }
   match '/indexhalaman' => 'pages#index'
  
