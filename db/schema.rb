@@ -11,9 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130629232153) do
+ActiveRecord::Schema.define(:version => 20130701025316) do
 
   create_table "artikels", :force => true do |t|
+    t.string   "nama"
+    t.text     "isi"
+    t.string   "penulis"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "berita", :force => true do |t|
     t.string   "nama"
     t.text     "isi"
     t.string   "penulis"
@@ -50,6 +58,14 @@ ActiveRecord::Schema.define(:version => 20130629232153) do
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
     t.boolean  "mata_kuliah_pilihan"
+  end
+
+  create_table "news", :force => true do |t|
+    t.string   "nama"
+    t.text     "isi"
+    t.string   "penulis"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "pages", :force => true do |t|

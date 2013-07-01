@@ -1,38 +1,10 @@
 Unifa::Application.routes.draw do
-  get "infos/index"
 
-  get "infos/new"
 
-  get "infos/edit"
 
-  get "infos/show"
-
-  get "artikels/index"
-
-  get "artikels/new"
-
-  get "artikels/edit"
-
-  get "artikels/show"
-
-  get "artikels/update"
-
-  get "artikels/destroy"
-
-  get "beritas/index"
-
-  get "beritas/new"
-
-  get "beritas/edit"
-
-  get "beritas/show"
-
-  get "beritas/update"
-
-  get "beritas/destroy"
 
   resources :matakuliahs
-   
+
   
   resources :krs_onlines
   match '/krsonline' => 'krs_onlines#index'
@@ -41,7 +13,8 @@ Unifa::Application.routes.draw do
   match '/penelitiandosen' => 'pages#show', :defaults => { :id => '12' }
   match '/panduansertifikasi' => 'pages#show', :defaults => { :id => '11' }
   match '/indexhalaman' => 'pages#index'
-  
+ 
+
   
   
   
