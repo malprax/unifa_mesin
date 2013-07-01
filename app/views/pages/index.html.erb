@@ -19,7 +19,7 @@
           <td><%= link_to 'Edit', edit_page_path(page) %></td>
       <%end%>
       <%if can? :destroy, @page %>
-          <td><%= link_to 'Destroy', page_path(page),method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Destroy', page_path(page),method: :delete, data: { confirm: 'Hapus Halaman Ini?' } %></td>
       <%end%>
     <%end%>
   </tr>

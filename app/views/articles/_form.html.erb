@@ -1,0 +1,6 @@
+<%= simple_form_for (@article) do |f|%>
+<%= f.input :name, label: "Judul"%>
+<%= f.input_field :content, label:"Isi"%>
+<%= f.input :author_name, label: "Penulis"%>
+<%= f.submit%>
+<%end%>

@@ -1,0 +1,10 @@
+<h1>Index Artikel</h1>
+
+<% @articles.each do |a|%>
+  <h3><%= a.name %></h3>
+  <%= simple_format a.content %>
+  Dibuat oleh <%= a.author_name %> pada <%= a.created_at.strftime('%b %d, %Y')%></br>
+  <%= link_to 'Edit', edit_article_path(a) %> || <%= link_to 'Hapus', article_path(a), methode: :delete, data: {confirm: 'Hapus Artikel Ini?'} %></br>
+<% end %>
+
+<%= link_to 'Buat Artikel', new_article_path %>

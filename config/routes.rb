@@ -3,6 +3,8 @@ Unifa::Application.routes.draw do
 
 
 
+  get "articles/index"
+  resources :articles
   resources :matakuliahs
 
   
