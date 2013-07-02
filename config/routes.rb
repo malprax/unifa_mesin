@@ -3,9 +3,12 @@ Unifa::Application.routes.draw do
 
 
 
+  resources :information
+
+
   resources :articles
   resources :matakuliahs
-  resources :informations
+ 
   
   resources :krs_onlines
   match '/krsonline' => 'krs_onlines#index'
@@ -15,7 +18,7 @@ Unifa::Application.routes.draw do
   match '/panduansertifikasi' => 'pages#show', :defaults => { :id => '11' }
   match '/indexhalaman' => 'pages#index'
   match '/artikel' => 'articles#index'
-  match '/info' => 'informations#index'
+  match '/infokampus' => 'information#index'
  
 
   

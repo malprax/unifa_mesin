@@ -1,0 +1,23 @@
+<h1>Info Kampus</h1>
+
+
+<div>
+<% @information.each do |information| %>
+  <h3><%= link_to information.info_name, information %></h3>   
+   <%= raw information.content%>
+   Dibuat oleh <%= information.author_info %> pada <%= information.created_at.strftime('%d %b, %Y')%>
+  </br>
+  <%if user_signed_in? %>
+    <% if can? :create, Matakuliah %>
+    <%= link_to 'Edit', edit_information_path(information) %> ||
+    <%= link_to 'Hapus', information, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  <% end %>
+<% end %>
+</div>
+<br />
+<%if user_signed_in? %>
+  <% if can? :create, Information %>
+    <%= link_to 'Tambah Info', new_information_path %>
+  <% end %>
+<% end %>

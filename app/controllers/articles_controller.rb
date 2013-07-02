@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   load_and_authorize_resource
+   before_filter :authenticate_user!, except: [:index]
   def index
     @articles = Article.all
   end

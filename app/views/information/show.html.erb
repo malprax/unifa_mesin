@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h3><%= @information.info_name %></h3>
+
+<p> 
+  <%= raw @information.content %>
+</p>
+
+<p>
+  <b>Sumber Info:</b>
+  <%= @information.author_info %>
+</p>
+
+<%if user_signed_in? %>
+  <% if can? :update, Information %>
+<%= link_to 'Edit', edit_information_path(@information) %> |
+<%end %>
+<%end %>
+<%= link_to 'Kembali', information_index_path %>
