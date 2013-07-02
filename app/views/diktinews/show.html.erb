@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Headline:</b>
+  <%= @diktinews.headline %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @diktinews.content %>
+</p>
+
+<p>
+  <b>Reference:</b>
+  <%= @diktinews.reference %>
+</p>
+
+
+<%= link_to 'Edit', edit_diktinews_path(@diktinews) %> |
+<%= link_to 'Back', diktinews_index_path %>
