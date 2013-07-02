@@ -2,7 +2,7 @@ class MatakuliahsController < ApplicationController
   load_and_authorize_resource
   before_filter :authenticate_user!, except: [:index]
   def index
-    @matakuliah = Matakuliah.all
+    @matakuliahs = Matakuliah.order(params[:sort])
   end
   def new
     @matakuliah = Matakuliah.new

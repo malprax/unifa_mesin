@@ -3,16 +3,16 @@
 <table class="table table-bordered">
    <tr>
       <th>No</th>
-      <th>Kode</th>
+      <th><%= link_to "Kode", :sort => "kode" %></th>
       <th>Mata Kuliah</th>
       <th>Teori(sks)</th>
       <th>Lab(sks)</th>
-      <th>Jumlah(sks)</th>
-      <th>Semester</th>
-      <th>Mata Kuliah Pilihan</th>
+      <th>Jumlah</th>
+      <th><%= link_to "Semester", :sort => "semester" %></th>
+      <th><%= link_to "Mata Kuliah Pilihan", :sort => "mata_kuliah_pilihan" %></th>
       
   </tr>
-   <% Matakuliah.all.each_with_index do |m,i| %>
+   <% @matakuliahs.each_with_index do |m,i| %>
   <tr>
       <td><%= i + 1%></td>
       <td><%= m.kode%></td>
