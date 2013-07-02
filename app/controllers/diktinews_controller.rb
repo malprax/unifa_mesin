@@ -1,6 +1,8 @@
 class DiktinewsController < ApplicationController
   # GET /diktinews
   # GET /diktinews.json
+  load_and_authorize_resource
+   before_filter :authenticate_user!, except: [:index]
   def index
     @diktinews = Diktinews.all
 

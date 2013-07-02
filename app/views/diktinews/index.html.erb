@@ -1,27 +1,20 @@
-<h1>Listing diktinews</h1>
-
-<table>
-  <tr>
-    <th>Headline</th>
-    <th>Content</th>
-    <th>Reference</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @diktinews.each do |diktinews| %>
-  <tr>
-    <td><%= diktinews.headline %></td>
-    <td><%= diktinews.content %></td>
-    <td><%= diktinews.reference %></td>
-    <td><%= link_to 'Show', diktinews %></td>
-    <td><%= link_to 'Edit', edit_diktinews_path(diktinews) %></td>
-    <td><%= link_to 'Destroy', diktinews, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% Diktinews.all.each do |diktinews| %>
+ 
+    <%= diktinews.headline %>
+    <%= diktinews.content %>
+    <%= diktinews.reference %>
+    <%if user_signed_in? %>
+      <% if can? :create, Matakuliah %>
+        <%= link_to 'Edit', edit_diktinews_path(diktinews) %>
+        <%= link_to 'Destroy', diktinews, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    <% end %>
 <% end %>
-</table>
+
 
 <br />
-
-<%= link_to 'New Diktinews', new_diktinews_path %>
+<%if user_signed_in? %>
+  <% if can? :create, Information %>
+    <%= link_to 'Buat Berita', new_diktinews_path %>
+  <% end %>
+<% end %>

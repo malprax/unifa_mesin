@@ -1,5 +1,6 @@
 class KrsOnlinesController < ApplicationController
-  before_filter :authenticate_user!
+  load_and_authorize_resource
+  before_filter :authenticate_user!, except: [:index] 
   before_filter :check_biodata
   def index
   end

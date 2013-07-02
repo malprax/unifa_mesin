@@ -4,6 +4,7 @@ class CreateDiktinews < ActiveRecord::Migration
       t.string :headline
       t.text :content
       t.string :reference
+      t.string :image
 
       t.timestamps
     end

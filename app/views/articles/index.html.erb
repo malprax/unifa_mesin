@@ -1,5 +1,3 @@
-<h1>Artikel</h1>
-
 <% Article.all.each do |a|%>
   <h4><%= a.name %></h4>
   <%= image_tag a.image_url(:thumb).to_s %> 
