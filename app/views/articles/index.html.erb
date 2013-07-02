@@ -1,6 +1,6 @@
 <h1>Artikel</h1>
 
-<% @articles.each do |a|%>
+<% Article.all.each do |a|%>
   <h4><%= a.name %></h4>
   <%= image_tag a.image_url(:thumb).to_s %> 
   <%= raw a.content %>
@@ -9,8 +9,8 @@
 <% end %>
 <hr>
 
-<% if user_sign_in? %>
-  <% if can? :create, Artikel %>
+<% if user_signed_in? %>
+  <% if can? :create, Article %>
     <%= link_to 'Buat Artikel', new_article_path %>
   <% end %>
 <% end %>
