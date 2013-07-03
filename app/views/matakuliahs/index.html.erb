@@ -10,8 +10,12 @@
       <th>Jumlah</th>
       <th><%= sortable "semester", "Semester" %></th>
       <th><%= sortable "mata_kuliah_pilihan", "Mata Kuliah Pilihan" %></th>
+      <%if user_signed_in? %>
+      <%if can? :update, :destroy, @matakuliahs %>     
       <th></th>
-      <th></th>      
+      <th></th>
+      <% end %>
+      <%end%>      
   </tr>
    <% @matakuliahs.each_with_index do |m,i| %>
   <tr>

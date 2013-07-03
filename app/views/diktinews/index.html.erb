@@ -1,8 +1,8 @@
 <% Diktinews.all.each do |diktinews| %>
  
-    <%= diktinews.headline %>
-    <%= diktinews.content %>
-    <%= diktinews.reference %>
+    <h3><%= raw diktinews.headline %></h3>
+    <p><%= raw diktinews.content %></p>
+    <aside><%= raw diktinews.reference %></aside>
     <%if user_signed_in? %>
       <% if can? :create, Matakuliah %>
         <%= link_to 'Edit', edit_diktinews_path(diktinews) %>
