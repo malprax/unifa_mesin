@@ -1,16 +1,17 @@
 <h3><center>Mata Kuliah Kurikulum 2011</center></h3>
 
-<table class="table table-bordered">
+<table class="table table-bordered ">
    <tr>
       <th>No</th>
-      <th><%= link_to "Kode", :sort => "kode" %></th>
+      <th><%= sortable "kode", "Kode" %></th>
       <th>Mata Kuliah</th>
       <th>Teori(sks)</th>
       <th>Lab(sks)</th>
       <th>Jumlah</th>
-      <th><%= link_to "Semester", :sort => "semester" %></th>
-      <th><%= link_to "Mata Kuliah Pilihan", :sort => "mata_kuliah_pilihan" %></th>
-      
+      <th><%= sortable "semester", "Semester" %></th>
+      <th><%= sortable "mata_kuliah_pilihan", "Mata Kuliah Pilihan" %></th>
+      <th></th>
+      <th></th>      
   </tr>
    <% @matakuliahs.each_with_index do |m,i| %>
   <tr>
@@ -21,7 +22,7 @@
       <td><center><%= m.lab %></center></td>
       <td><center><%= m.teori + m.lab %></center></td>
       <td><center><%= m.semester %></center></td>
-      <td><center><%= m.mata_kuliah_pilihan == false ? "ya" : "tidak" %></center></td> 
+      <td><center><%= m.mata_kuliah_pilihan == false ? "tidak" : "ya" %></center></td> 
       <%if user_signed_in? %>
       <%if can? :update, m %>     
       <td><%= link_to 'Edit', edit_matakuliah_path(m) %></td>
