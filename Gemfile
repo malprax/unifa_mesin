@@ -20,7 +20,7 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
   gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
-  
+  gem 'jquery-ui-rails'
   
 end
 
@@ -35,6 +35,7 @@ gem 'simple_form'
 gem 'country_select'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'truncate_html', '0.9.2'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

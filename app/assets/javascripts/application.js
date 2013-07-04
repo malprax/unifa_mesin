@@ -14,6 +14,7 @@
 
 
 //= require jquery_ujs
+//= require dataTables/jquery.dataTables
 
 
 //= require twitter/bootstrap

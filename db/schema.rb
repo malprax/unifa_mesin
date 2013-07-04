@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130702080752) do
+ActiveRecord::Schema.define(:version => 20130703095231) do
 
   create_table "articles", :force => true do |t|
     t.string   "name"
@@ -69,6 +69,19 @@ ActiveRecord::Schema.define(:version => 20130702080752) do
     t.datetime "updated_at",          :null => false
     t.boolean  "mata_kuliah_pilihan"
   end
+
+  create_table "menustudies", :force => true do |t|
+    t.string   "kode_id"
+    t.string   "matakuliah_id"
+    t.text     "description"
+    t.text     "general_goal"
+    t.text     "specific_goal"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "menustudies", ["kode_id"], :name => "index_menustudies_on_kode_id"
+  add_index "menustudies", ["matakuliah_id"], :name => "index_menustudies_on_matakuliah_id"
 
   create_table "news", :force => true do |t|
     t.string   "nama"

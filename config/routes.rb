@@ -13,8 +13,9 @@ Unifa::Application.routes.draw do
 
 
   resources :articles
-  resources :matakuliahs
- 
+  resources :matakuliahs do
+  resources :menustudies
+  end
   
   resources :krs_onlines
   match '/krsonline' => 'krs_onlines#index'
