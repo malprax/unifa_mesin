@@ -1,6 +1,6 @@
 <div>
 <h4><%= @article.name%></h4>
-<%= image_tag @article.image_url.to_s %>
+<%#= image_tag @article.image_url.to_s %>
 <%= raw @article.content %>
 Dibuat oleh <%= @article.author_name %> pada <%= @article.created_at.strftime('%d %b, %Y')%></br>
 </div>

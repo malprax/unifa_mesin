@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 <div>
 <h4><%= @diktinews.headline%></h4>
+<%#= image_tag @article.image_url.to_s %>
 <%= raw @diktinews.content %>
 Sumber Berita <%= @diktinews.reference %> dibuat pada <%= @diktinews.created_at.strftime('%d %b, %Y')%></br>
 </div>

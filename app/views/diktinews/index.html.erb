@@ -1,27 +1,15 @@
-<h1>Listing diktinews</h1>
-
-<table>
-  <tr>
-    <th>Headline</th>
-    <th>Content</th>
-    <th>Reference</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1>Berita Dikti</h1>
 
 <% @diktinews.each do |diktinews| %>
-  <tr>
-    <td><%= diktinews.headline %></td>
-    <td><%= diktinews.content %></td>
-    <td><%= diktinews.reference %></td>
-    <td><%= link_to 'Show', diktinews %></td>
-    <td><%= link_to 'Edit', edit_diktinews_path(diktinews) %></td>
-    <td><%= link_to 'Destroy', diktinews, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  
+   <h4><%= link_to diktinews.headline, diktinews %></h4>
+    <p><%= raw diktinews.content %></p>
+    Referensi <%= diktinews.reference %> 
+    Tanggal Posting <%= diktinews.created_at.strftime('%d %b, %Y')%></br>
+    <%= link_to 'Edit', edit_diktinews_path(diktinews) %> || <%= link_to 'Hapus', diktinews, method: :delete, data: {confirm: 'Hapus Berita Ini?'} %></br>    
+    
 <% end %>
-</table>
 
 <br />
 
-<%= link_to 'New Diktinews', new_diktinews_path %>
+<%= link_to 'Buat Berita', new_diktinews_path %>

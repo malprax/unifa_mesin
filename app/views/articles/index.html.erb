@@ -3,7 +3,7 @@
 <% @articles.each do |a|%>
   <h4><%= a.name %></h4>
  
-  <%= image_tag a.image_url(:thumb).to_s %> 
+  <%#= image_tag a.image_url(:thumb).to_s %> 
   <%= raw a.content %>
   Dibuat oleh <%= a.author_name %> pada <%= a.created_at.strftime('%d %b, %Y')%></br>
   <%= link_to 'Edit', edit_article_path(a) %> || <%= link_to 'Hapus', article_path(a), method: :delete, data: {confirm: 'Hapus Artikel Ini?'} %></br>
