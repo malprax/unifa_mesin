@@ -1,20 +1,8 @@
 <p id="notice"><%= notice %></p>
+<div>
+<h4><%= @diktinews.headline%></h4>
+<%= raw @diktinews.content %>
+Sumber Berita <%= @diktinews.reference %> dibuat pada <%= @diktinews.created_at.strftime('%d %b, %Y')%></br>
+</div>
 
-<p>
-  <b>Headline:</b>
-  <%= @diktinews.headline %>
-</p>
-
-<p>
-  <b>Content:</b>
-  <%= @diktinews.content %>
-</p>
-
-<p>
-  <b>Reference:</b>
-  <%= @diktinews.reference %>
-</p>
-
-
-<%= link_to 'Edit', edit_diktinews_path(@diktinews) %> |
-<%= link_to 'Back', diktinews_index_path %>
+<%= link_to 'Edit', edit_diktinews_path(@diktinews) %> | <%= link_to 'Index', diktinews_index_path %>

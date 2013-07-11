@@ -22,6 +22,7 @@ Unifa::Application.routes.draw do
   match '/indexhalaman' => 'pages#index'
   match '/artikel' => 'articles#index'
   match '/infokampus' => 'information#index'
+  match '/beritadikti' => 'diktinews#index'
  
 
   

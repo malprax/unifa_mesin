@@ -44,7 +44,7 @@ class DiktinewsController < ApplicationController
 
     respond_to do |format|
       if @diktinews.save
-        format.html { redirect_to @diktinews, notice: 'Diktinews was successfully created.' }
+        format.html { redirect_to @diktinews, notice: 'Berita Dikti berhasil dibuat.' }
         format.json { render json: @diktinews, status: :created, location: @diktinews }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class DiktinewsController < ApplicationController
 
     respond_to do |format|
       if @diktinews.update_attributes(params[:diktinews])
-        format.html { redirect_to @diktinews, notice: 'Diktinews was successfully updated.' }
+        format.html { redirect_to @diktinews, notice: 'Berita dikti berhasil di updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

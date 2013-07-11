@@ -1,8 +1,9 @@
 class ArticlesController < ApplicationController
   load_and_authorize_resource
    before_filter :authenticate_user!, except: [:index]
-  def index
     
+  def index
+    @articles = Article.all
   end
   
   def new
@@ -43,5 +44,8 @@ class ArticlesController < ApplicationController
     @article.destroy
     redirect_to articles_path    
   end 
+  
+  
+  
   
 end
