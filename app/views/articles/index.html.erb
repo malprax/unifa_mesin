@@ -6,14 +6,17 @@
   <%#= image_tag a.image_url(:thumb).to_s %> 
   <%= raw a.content %>
   Dibuat oleh <%= a.author_name %> pada <%= a.created_at.strftime('%d %b, %Y')%></br>
-  <%= link_to 'Edit', edit_article_path(a) %> || <%= link_to 'Hapus', article_path(a), method: :delete, data: {confirm: 'Hapus Artikel Ini?'} %></br>
+  <%if user_signed_in? %>
+    <%if can? :update, @page %>
+    <%= link_to 'Edit', edit_article_path(a) %> ||<% end %> <%if can? :destroy, @page %><%= link_to 'Hapus', article_path(a), method: :delete, data: {confirm: 'Hapus Artikel Ini?'} %><% end %></br>
   
 <% end %>
+<%end%>
 
 <hr>
 
 <% if user_signed_in? %>
-  <% if can? :create, Article %>
+  <% if can? :create, @article %>
     <%= link_to 'Buat Artikel', new_article_path %>
   <% end %>
 <% end %>

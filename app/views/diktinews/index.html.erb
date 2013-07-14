@@ -4,12 +4,21 @@
   
    <h4><%= link_to diktinews.headline, diktinews %></h4>
     <p><%= raw diktinews.content %></p>
-    Referensi <%= diktinews.reference %> 
+    <aside>Referensi <%= diktinews.reference %></aside> 
     Tanggal Posting <%= diktinews.created_at.strftime('%d %b, %Y')%></br>
-    <%= link_to 'Edit', edit_diktinews_path(diktinews) %> || <%= link_to 'Hapus', diktinews, method: :delete, data: {confirm: 'Hapus Berita Ini?'} %></br>    
     
+    <%if user_signed_in? %>
+      <%if can? :update, @page %>
+      <%= link_to 'Edit', edit_diktinews_path(diktinews) %> <%end%>|| 
+      <%if can? :destroy, @page %>
+      <%= link_to 'Hapus', diktinews, method: :delete, data: {confirm: 'Hapus Berita Ini?'} %>
+      <%end%>
+    <%end%></br>    
+    <hr>
 <% end %>
 
-<br />
-
-<%= link_to 'Buat Berita', new_diktinews_path %>
+<%if user_signed_in? %>
+  <% if can? :create, @diktinews %>
+    <%= link_to 'Buat Berita', new_diktinews_path %>
+  <% end %>
+<% end %>
