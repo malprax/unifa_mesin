@@ -11,12 +11,15 @@
     <%= link_to 'Edit', edit_article_path(a) %> ||<% end %> <%if can? :destroy, @page %><%= link_to 'Hapus', article_path(a), method: :delete, data: {confirm: 'Hapus Artikel Ini?'} %><% end %></br>
   
 <% end %>
+<hr>
 <%end%>
 
-<hr>
 
 <% if user_signed_in? %>
   <% if can? :create, @article %>
-    <%= link_to 'Buat Artikel', new_article_path %>
+    <%= link_to '<i class="icon-pencil"></i> Buat Artikel'.html_safe, new_article_path %>
   <% end %>
 <% end %>
+<hr>
+
+

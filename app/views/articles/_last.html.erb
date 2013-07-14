@@ -1,0 +1,5 @@
+<h4><%= @articles.last.name %></h4>
+
+<%#= image_tag a.image_url(:thumb).to_s %> 
+<%= raw @articles.last.content %>
+Dibuat oleh <%= @articles.last.author_name %> pada <%= @articles.last.created_at.strftime('%d %b, %Y')%></br>

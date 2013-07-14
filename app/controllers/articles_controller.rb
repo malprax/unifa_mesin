@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.create(params[:article])
     if @article.save
-      redirect_to(@article, :notice => 'Halaman Berhasil Dibuat.')
+      redirect_to(@article, :notice => 'Artikel Berhasil Dibuat.')
     else
       render 'new'
     end    
