@@ -6,3 +6,4 @@ jQuery ->
     "aoColumnDefs": [
       { 'bSortable': false, 'aTargets': [8,9] }
     ]
+    bJQueryUI: true
