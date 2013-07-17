@@ -1,4 +1,7 @@
 require File.expand_path('../boot', __FILE__)
+# export css file
+require 'csv'
+
 
 # Pick the frameworks you want:
 require "active_record/railtie"

@@ -6,6 +6,8 @@ class MatakuliahsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @matakuliah }
+      format.csv { send_data @matakuliah.to_csv}
+      format.xls
     end
   end
   def new
@@ -20,11 +22,11 @@ class MatakuliahsController < ApplicationController
     @matakuliah = Matakuliah.new(params[:matakuliah])
     respond_to do |format|
       if @matakuliah.save
-        format.html { redirect_to @matakuliah, :notice => 'Mata Kuliah Berhasil Dibuat.' }
+        format.html { redirect_to matakuliahs_index_path, :notice => 'Mata Kuliah Berhasil Dibuat.' }
         format.json { render json: @matakuliah, status: :created, location: @matakuliah }
       else
         format.html { render action: "new" }
-        format.json { render json: @matakuliah.errors, status: :unprocessable_entity }
+        format.json { render json: matakuliahs_index_path.errors, status: :unprocessable_entity }
       end
     end
     
@@ -40,11 +42,11 @@ class MatakuliahsController < ApplicationController
         
     respond_to do |format|
       if @matakuliah.update_attributes(params[:matakuliah])
-        format.html { redirect_to @matakuliah, :notice => 'Mata Kuliah Berhasil Diperbaharui.'}
+        format.html { redirect_to matakuliahs_path, :notice => 'Mata Kuliah Berhasil Diperbaharui.'}
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        format.json { render json: @information.errors, status: :unprocessable_entity }
+        format.json { render json: matakuliahs_path.errors, status: :unprocessable_entity }
       end
     end
   end
