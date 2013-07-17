@@ -3,6 +3,9 @@ Unifa::Application.routes.draw do
 
 
 
+  resources :admins
+
+
   resources :diktinews
 
 
