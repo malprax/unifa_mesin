@@ -19,10 +19,7 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dosen<b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <!-- links -->
-                <li><%=link_to "Staf", "#" %></li>
-                <li ><%=link_to "Beasiswa", "#"%></li>        
-                <li><%=link_to "Mata Kuliah", matakuliahs_path %></li>
-                <li><%=link_to "Penelitian", penelitiandosen_path %></li>  
+                <li><%=link_to "Staf", "#" %></li>             
                 <li><%=link_to "Sertifikasi", panduansertifikasi_path %></li> 
                 <li><%=link_to "Pengajaran", "#" %></li>  
                              
@@ -35,10 +32,7 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mahasiswa<b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <!-- links -->
-                <li><%=link_to "Penelitian", penelitianmahasiswa_path %></li>
-                <li><%=link_to "Beasiswa", "#"%></li>
-                <li><%=link_to "Prestasi", "#" %></li>
-                <li><%=link_to "Menu Semester", "#" %></li> 
+                <li><%=link_to "Penelitian", penelitianmahasiswa_path %></li>            
                 <li><%=link_to "KRS Online", krsonline_path %></li>
                 <li><%=link_to "Tugas Akhir", "#" %></li>                
                 <li><%=link_to "Transkrip Nilai", "#" %></li>                          
@@ -48,7 +42,7 @@
             </li>
         </ul>
 
-
+        
         <ul class="nav nav-pills">
             <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Fitur<b class="caret"></b></a>
@@ -62,7 +56,22 @@
                      
             </ul>
             </li>
-        </ul>        
+        </ul> 
+        
+        <ul class="nav nav-pills">
+            <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Akademik <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <!-- links -->
+                <li><%=link_to "Mata Kuliah", matakuliahs_path %></li>
+                <li><%=link_to "Jadwal Kuliah", "#" %></li>
+                <li><%=link_to "Beasiswa", "#" %></li>
+                                    
+                
+                     
+            </ul>
+            </li>
+        </ul>              
        
         <ul class="nav nav-pills pull-right">        
                 <% if user_signed_in? %>

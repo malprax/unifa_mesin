@@ -1,0 +1,5 @@
+<h4><%= @diktinews.last.headline %></h4>
+
+<%#= image_tag a.image_url(:thumb).to_s %> 
+<%= raw @diktinews.last.content %>
+Sumber <%= @diktinews.last.reference %> </br>Tanggal Posting <%= @diktinews.last.created_at.strftime('%d %b, %Y')%></br>
