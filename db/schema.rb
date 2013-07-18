@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130702010932) do
+ActiveRecord::Schema.define(:version => 20130717160828) do
+
+  create_table "admins", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "articles", :force => true do |t|
     t.string   "name"
@@ -20,6 +26,15 @@ ActiveRecord::Schema.define(:version => 20130702010932) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "image"
+  end
+
+  create_table "diktinews", :force => true do |t|
+    t.string   "headline"
+    t.text     "content"
+    t.string   "reference"
+    t.string   "image"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "information", :force => true do |t|
@@ -60,6 +75,20 @@ ActiveRecord::Schema.define(:version => 20130702010932) do
     t.datetime "updated_at",          :null => false
     t.boolean  "mata_kuliah_pilihan"
   end
+
+  create_table "menustudies", :force => true do |t|
+    t.string   "kode_id"
+    t.string   "matakuliah_id"
+    t.text     "description"
+    t.text     "general_goal"
+    t.text     "specific_goal"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "sks_id"
+  end
+
+  add_index "menustudies", ["kode_id"], :name => "index_menustudies_on_kode_id"
+  add_index "menustudies", ["matakuliah_id"], :name => "index_menustudies_on_matakuliah_id"
 
   create_table "news", :force => true do |t|
     t.string   "nama"

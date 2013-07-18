@@ -1,0 +1,5 @@
+<h4><%= @information.last.info_name %></h4>
+
+<%#= image_tag a.image_url(:thumb).to_s %> 
+<%= raw @information.last.content %>
+<%#= @information.last.author_info %> Publikasi <%= @information.last.created_at.strftime('%d %b, %Y')%></br>
