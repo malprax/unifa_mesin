@@ -20,9 +20,10 @@
 
 .footer {
   font-size:13px;
-  padding-top: 20px;
+  padding-top: 0px;
   padding-right: 0px;
   padding-left: 20px;
+  padding-bottom:0px;
   
 }
 
@@ -32,11 +33,13 @@
 }
 
 .brandbawah{
-  padding-bottom: 20px; 
+  padding-top: 0px; 
+  
 }
 
 .date{
-  padding-top:0px;
+  padding-bottom:0px;
+  font-size:10px;
 }
 
 .dikti{
@@ -45,7 +48,7 @@
   padding-top:5px; 
   padding-left:20px; 
   padding-right:20px;
-  padding-bottom:50px;
+  padding-bottom:40px;
    
 }
 .info{
@@ -54,16 +57,20 @@
   padding-top:5px; 
   padding-left:20px; 
   padding-right:20px;
-  padding-bottom:70px;
+  padding-bottom:50px;
   
 }
 .artikel{
-  background-color:#B6E916;
+  background-color:#EFF73B;
   margin-bottom:10px;
   padding-top:5px; 
   padding-left:20px; 
   padding-right:20px;
-  padding-bottom:70px;
+  padding-bottom:60px;
   
-  
+}
+
+.selengkapnya{
+  padding-top: 0px;
+  align: left;;
 }

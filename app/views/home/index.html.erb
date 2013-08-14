@@ -17,22 +17,33 @@
   <div class="row-fluid">
     <div class="span4 dikti">
       
-      <h4>Berita Dikti</h4>
-      <p class="date"><%= render "diktinews/hotdikti" %></p>
-      <truncate></truncate>   
+      <h4><u>Berita Dikti</u></h4>
+      <h5>
+        <%= link_to  @diktinews.last.headline, beritadikti_path %></br>  
+        <%= @diktinews.last.created_at.strftime('%d %b, %Y')%>
+      </h5> 
+         
     </div>
     
     <div class="span4 info">
      
-      <h4>Info Kampus</h4>
-      <p class="date"> <%= render "information/hotinfo" %> </p>
+      <h4><u>Info Kampus</u></h4>
+      <h5>
+        <%= link_to  @information.last.info_name, infokampus_path %></br>  
+        <%= @information.last.created_at.strftime('%d %b, %Y')%>
+      </h5> 
       
+     
     </div>
     
     <div class="span4 artikel">
       
-      <h4>Artikel Teknologi</h4>
-      <p class="date"> <%= render "articles/hotartikel" %></p>
+      <h4><u>Artikel Teknologi</u></h4>
+      <h5>
+        <%= link_to  @articles.last.name, artikel_path %></br>  
+        <%= @articles.last.created_at.strftime('%d %b, %Y')%>
+      </h5>  
+      
         
     </div>
   </div>
