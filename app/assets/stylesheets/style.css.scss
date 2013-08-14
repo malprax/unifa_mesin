@@ -7,7 +7,7 @@
 
 .logo{
   padding-top: 5px;
-  padding-left:80px;  
+  padding-left:70px;  
   padding-right: 0px;
   padding-bottom: 20px;
  
@@ -18,14 +18,7 @@
   padding-bottom: 20px;
 }
 
-.footer {
-  font-size:13px;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-left: 20px;
-  padding-bottom:0px;
-  
-}
+
 
 .brandbawah{
   padding-top: 0px; 
@@ -39,14 +32,15 @@
 
 .dikti{
   background-color:#94CFAE;
-  margin-top:10px;
-  
+  margin-top:10px;  
   margin-bottom:10px;
   padding-top:5px; 
   padding-left:20px; 
   padding-right:20px;
   padding-bottom:40px;
   display: table; 
+  float:left;
+  height:200px;
 }
 
 .dikti h4 h5{
@@ -57,13 +51,14 @@
 .info{
   background-color:#DBB7B7;
   margin-top:10px;
-  margin-bottom:10px;
-  
+  margin-bottom:10px;  
   padding-top:5px; 
   padding-left:20px; 
   padding-right:20px;
   padding-bottom:40px;
   display: table; 
+  float:left;
+  height:200px;
 }
 
 .info h4 h5{
@@ -74,14 +69,15 @@
 
 .artikel{
   background-color:#EFF73B;
-  margin-top:10px;
-  
+  margin-top:10px;  
   margin-bottom:10px;
   padding-top:5px; 
   padding-left:20px; 
   padding-right:20px;
   padding-bottom:40px;
   display: table; 
+  float:left;
+  height:200px;
   
 }
 
@@ -93,5 +89,24 @@
 .selengkapnya{
   padding-top: 0px;
   align: left;;
+}
+
+.baris1{
+  overflow:hidden;
+}
+
+.footer {
+  overflow:hidden;
+  padding-right:0px;
+  
+}
+.motto {
+  float:left;
+  font-size:13px;
+}
+.footergasi {
+  float:left;
+  font-size:13px;
+ 
 }
 
