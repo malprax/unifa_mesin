@@ -1,63 +1,38 @@
-
-  
-  <div class="hero-unit">
+ <div class="hero-unit">
+    <div class = "row-fluid"><div class="span12">
+      <div class = "row-fluid"><div class="span4 logo">
+        <center>
+        <img alt  src="http://4.bp.blogspot.com/-IRbTc1e8OyI/UPYVD50TyVI/AAAAAAAAABY/n8xenZ_f-2E/s200/logo+unifa.jpg" height:50px > 
+      </center>
+      </div>
+      <div class = "row-fluid"><div class="span8 tulisan">
+        <center><h2>TEKNIK MESIN UNIVERSITAS FAJAR</h2></center>
+      </div>         
+    </div>
+  </div>
     
-     <div class = "row-fluid"><div class="span12"><center><h2>TEKNIK MESIN UNIVERSITAS FAJAR</h2></center></div></div>
-    <center><h3>Visi</h3></center>    
-    <center><p>"Menjadikan Program Studi Teknik Mesin unggulan di Kawasan Indonesia Timur berbasis    Technopreneurship yang berwawasan dan berdaya saing global."</p></center>
- 
      
-    <center><h3>Misi</h3></center>
-    <div class="row-fluid">
-            
-    <div class="span3"><p>"Menjalin dan memperluas hubungan kerjasama (link and match) yang strategis dengan instansi Pemerintah, Swasta, kalangan ilmiah dan Asosiasi profesional untuk menciptakan sinergi yang berdaya guna serta meningkatkan profesionalitas, kesejahteraan dan kemajuan bersama."</p></div>
-    
-    <div class="span3"><p>"Mengembangkan dan menerapkan kurikulum yang berdinamis dan akomodatif terhadap kebutuhan masyarakat, perkembangan ilmu dan teknologi."</p></div> 
-    
-    <div class="span3"><p>"Meningkatkan mutu program studi  Teknik Mesin sesuai kebutuhan yang mandiri, profesional dan terakreditasi baik."</p> </div>
-    
-    <div class="span3"><p>"Menghasilkan lulusan Program Studi Teknik Mesin yang mampu beradaptasi dan bersaing dalam dunia kerja, memiliki integritas, kredibilitas dan kualitas keilmuan yang tinggi serta berakhlak mulia dan berjiwa wirausaha." </p></div>   
-  
-  </div> 
-</div>
 
 
- 
-    <div class="thumbnail">
+  <div class="row-fluid">
+    <div class="span4 dikti">
       
-      <img data-src="holder.js/300x200" alt="">
-      <h3><i class="icon-book"></i> Berita Dikti</h3>
-      <p> <%= render "diktinews/hotdikti" %></p>
-    
+      <h4>Berita Dikti</h4>
+      <p class="date"><%= render "diktinews/hotdikti" %></p>
+      <truncate></truncate>   
     </div>
-  
-  
-    <div class="thumbnail">
-      
-      <img data-src="holder.js/300x200" alt="">
-      <h3><i class="icon-book"></i> Info Kampus</h3>
-      <p> <%= render "information/hotinfo" %> </p>
+    
+    <div class="span4 info">
+     
+      <h4>Info Kampus</h4>
+      <p class="date"> <%= render "information/hotinfo" %> </p>
       
     </div>
- 
-  
-    <div class="thumbnail">
+    
+    <div class="span4 artikel">
       
-      <img data-src="holder.js/300x200" alt="">
-      <h3><i class="icon-book"></i> Artikel Teknologi</h3>
-      <p> <%= render "articles/hotartikel" %></p>
-      
+      <h4>Artikel Teknologi</h4>
+      <p class="date"> <%= render "articles/hotartikel" %></p>
+        
     </div>
-  
-
-  
-  
-  
-  
-
-  
-  
-  
-  
- 
-
+  </div>

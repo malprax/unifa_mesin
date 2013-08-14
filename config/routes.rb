@@ -22,6 +22,7 @@ Unifa::Application.routes.draw do
   match '/penelitianmahasiswa' => 'pages#show', :defaults => { :id => '5' }
   match '/penelitiandosen' => 'pages#show', :defaults => { :id => '13' }
   match '/panduansertifikasi' => 'pages#show', :defaults => { :id => '11' }
+  match '/visimisi' => 'pages#show', :defaults => { :id => '14' }
   match '/indexhalaman' => 'pages#index'
   match '/artikel' => 'articles#index'
   match '/infokampus' => 'information#index'
