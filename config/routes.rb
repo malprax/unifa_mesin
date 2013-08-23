@@ -4,18 +4,10 @@ Unifa::Application.routes.draw do
 
 
   resources :admins
-
-
   resources :diktinews
-
-
   resources :information
-
-
   resources :articles
-  resources :matakuliahs
- 
-  
+  resources :matakuliahs  
   resources :krs_onlines
   match '/krsonline' => 'krs_onlines#index'
   
