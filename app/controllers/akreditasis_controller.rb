@@ -1,6 +1,15 @@
 class AkreditasisController < ApplicationController
   # GET /akreditasis
   # GET /akreditasis.json
+  def akreditasi_pt
+    @akreditasis = Akreditasi.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @akreditasis }
+    end
+  end
+  
   def index
     @akreditasis = Akreditasi.all
 
@@ -13,6 +22,7 @@ class AkreditasisController < ApplicationController
   # GET /akreditasis/1
   # GET /akreditasis/1.json
   def show
+    @akreditasis = Akreditasi.all
     @akreditasi = Akreditasi.find(params[:id])
 
     respond_to do |format|
@@ -44,7 +54,7 @@ class AkreditasisController < ApplicationController
 
     respond_to do |format|
       if @akreditasi.save
-        format.html { redirect_to @akreditasi, notice: 'Akreditasi was successfully created.' }
+        format.html { redirect_to @akreditasi, notice: 'Standar Akreditasi Berhasil Dibuat.' }
         format.json { render json: @akreditasi, status: :created, location: @akreditasi }
       else
         format.html { render action: "new" }
@@ -60,7 +70,7 @@ class AkreditasisController < ApplicationController
 
     respond_to do |format|
       if @akreditasi.update_attributes(params[:akreditasi])
-        format.html { redirect_to @akreditasi, notice: 'Akreditasi was successfully updated.' }
+        format.html { redirect_to @akreditasi, notice: 'Standar Akreditasi Berhasil Di Update.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

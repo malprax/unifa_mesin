@@ -5,17 +5,14 @@
     <th>Standar</th>
     <th>Nama</th>
     <th></th>
-    <th></th>
-    <th></th>
+    
   </tr>
 
 <% @akreditasis.each_with_index do |akreditasi, i| %>
   <tr>
-    <td>Standar <%= i + 1 %></td>
-    <td><%= akreditasi.name %></td>
-    <td><%= link_to 'Show', akreditasi %></td>
-    <td><%= link_to 'Edit', edit_akreditasi_path(akreditasi) %></td>
-    <td><%= link_to 'Destroy', akreditasi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><strong>Standar <%= i + 1 %></strong></td>
+    <td><%= link_to akreditasi.name, akreditasi %></td>    
+    <td><%= link_to '<i class="icon-remove"></i> Hapus'.html_safe, akreditasi, method: :delete, data: { confirm: 'Anda Yakin Hapus?' } %></td>
   </tr>
 <% end %>
 </table>
@@ -23,3 +20,5 @@
 <br />
 
 <%= link_to '<i class="icon-plus"></i> Tambah Standar Akreditasi'.html_safe, new_akreditasi_path %>
+
+
