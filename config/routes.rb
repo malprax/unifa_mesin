@@ -3,6 +3,9 @@ Unifa::Application.routes.draw do
 
 
 
+  resources :akreditasis
+
+
   resources :admins
   resources :diktinews
   resources :information

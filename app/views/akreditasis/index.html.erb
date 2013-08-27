@@ -1,0 +1,25 @@
+<h1>Listing akreditasis</h1>
+
+<table>
+  <tr>
+    <th>Standar</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @akreditasis.each_with_index do |akreditasi, i| %>
+  <tr>
+    <td>Standar <%= i + 1 %></td>
+    <td><%= akreditasi.name %></td>
+    <td><%= link_to 'Show', akreditasi %></td>
+    <td><%= link_to 'Edit', edit_akreditasi_path(akreditasi) %></td>
+    <td><%= link_to 'Destroy', akreditasi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Akreditasi', new_akreditasi_path %>
