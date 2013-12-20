@@ -19,11 +19,14 @@ Unifa::Application.routes.draw do
   match '/penelitiandosen' => 'pages#show', :defaults => { :id => '13' }
   match '/panduansertifikasi' => 'pages#show', :defaults => { :id => '11' }
   match '/visimisi' => 'pages#show', :defaults => { :id => '14' }
+  match '/kode_etik_perkuliahan' => 'pages#show', :defaults => { :id => '16' }
+  match '/kode_etik_midfinal_test' => 'pages#show', :defaults => { :id => '17' }
   match '/indexhalaman' => 'pages#index'
   match '/artikel' => 'articles#index'
   match '/infokampus' => 'information#index'
   match '/beritadikti' => 'diktinews#index'
    match '/akreditasi_pt' => 'akreditasis#akreditasi_pt'
+   
  
 
   
