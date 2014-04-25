@@ -11,14 +11,21 @@
 <% @akreditasis.each_with_index do |akreditasi, i| %>
   <tr>
     <td><strong>Standar <%= i + 1 %></strong></td>
-    <td><%= link_to akreditasi.name, akreditasi %></td>    
+    <td><%= link_to akreditasi.name, akreditasi %></td> 
+    <% if user_signed_in? %>
+      <% if can? :update, @akreditasi %>   
     <td><%= link_to '<i class="icon-remove"></i> Hapus'.html_safe, akreditasi, method: :delete, data: { confirm: 'Anda Yakin Hapus?' } %></td>
+    <% end %>
+    <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
 
+<% if user_signed_in? %>
+    <% if can? :update, @akreditasi %>   
 <%= link_to '<i class="icon-plus"></i> Tambah Standar Akreditasi'.html_safe, new_akreditasi_path %>
-
+    <% end %>
+<% end %>
 

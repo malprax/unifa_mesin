@@ -1,4 +1,6 @@
 class AkreditasisController < ApplicationController
+  #load_and_authorize_resource
+  before_filter :authenticate_user!, except: [:akreditasi_pt]
   # GET /akreditasis
   # GET /akreditasis.json
   def akreditasi_pt
