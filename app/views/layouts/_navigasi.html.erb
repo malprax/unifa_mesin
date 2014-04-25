@@ -16,7 +16,7 @@
         
             <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profil<b class="caret"></b></a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                 <!-- links -->
                 <li><%=link_to "Akreditasi", akreditasi_pt_path%></li> 
                 <li><%=link_to "Berita Dikti", beritadikti_path %></li>
@@ -29,8 +29,8 @@
             </li>
        
             <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dosen<b class="caret"></b></a>
-            <ul class="dropdown-menu">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" >Dosen<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                 <!-- links -->
                 <li><%=link_to "Staf", "#" %></li>             
                 <li><%=link_to "Sertifikasi", panduansertifikasi_path %></li> 
@@ -41,7 +41,7 @@
        
             <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mahasiswa<b class="caret"></b></a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu"role="menu" aria-labelledby="dropdownMenu">
                 <!-- links -->
                 <li><%=link_to "Penelitian", penelitianmahasiswa_path %></li>            
                 <li><%=link_to "KRS Online", krsonline_path %></li>
@@ -54,7 +54,7 @@
        
             <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Akademik <b class="caret"></b></a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                 <!-- links -->
                 <li><%=link_to "Kode Etik Perkuliahan", kode_etik_perkuliahan_path %></li>
                 <li><%=link_to "Kode Etik Mid/Final Test", kode_etik_midfinal_test_path %></li>
