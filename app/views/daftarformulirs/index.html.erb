@@ -1,0 +1,69 @@
+<h1>Listing daftarformulirs</h1>
+
+<table>
+  <tr>
+    <th>No pendaftaran</th>
+    <th>Nama</th>
+    <th>Alamat</th>
+    <th>Kode pos</th>
+    <th>No hp</th>
+    <th>Tempat lahir</th>
+    <th>Tanggal lahir</th>
+    <th>Jenis kelamin</th>
+    <th>Agama</th>
+    <th>Suku</th>
+    <th>Alamat tinggal sekarang</th>
+    <th>Nama lengkap ayah</th>
+    <th>Pekerjaan ayah</th>
+    <th>Alamat ayah</th>
+    <th>Nama lengkap ibu</th>
+    <th>Pekerjaan ibu</th>
+    <th>Nama slta</th>
+    <th>Kabupaten slta</th>
+    <th>Propinsi slta</th>
+    <th>Jurusan slta</th>
+    <th>Tahun masuk slta</th>
+    <th>Tahun lulus slta</th>
+    <th>Total nilai ujian nasional</th>
+    <th>Jumlah mata pelajaran ujian nasional</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @daftarformulirs.each do |daftarformulir| %>
+  <tr>
+    <td><%= daftarformulir.no_pendaftaran %></td>
+    <td><%= daftarformulir.nama %></td>
+    <td><%= daftarformulir.alamat %></td>
+    <td><%= daftarformulir.kode_pos %></td>
+    <td><%= daftarformulir.no_hp %></td>
+    <td><%= daftarformulir.tempat_lahir %></td>
+    <td><%= daftarformulir.tanggal_lahir %></td>
+    <td><%= daftarformulir.jenis_kelamin %></td>
+    <td><%= daftarformulir.agama %></td>
+    <td><%= daftarformulir.suku %></td>
+    <td><%= daftarformulir.alamat_tinggal_sekarang %></td>
+    <td><%= daftarformulir.nama_lengkap_ayah %></td>
+    <td><%= daftarformulir.pekerjaan_ayah %></td>
+    <td><%= daftarformulir.alamat_ayah %></td>
+    <td><%= daftarformulir.nama_lengkap_ibu %></td>
+    <td><%= daftarformulir.pekerjaan_ibu %></td>
+    <td><%= daftarformulir.nama_slta %></td>
+    <td><%= daftarformulir.kabupaten_slta %></td>
+    <td><%= daftarformulir.propinsi_slta %></td>
+    <td><%= daftarformulir.jurusan_slta %></td>
+    <td><%= daftarformulir.tahun_masuk_slta %></td>
+    <td><%= daftarformulir.tahun_lulus_slta %></td>
+    <td><%= daftarformulir.total_nilai_ujian_nasional %></td>
+    <td><%= daftarformulir.jumlah_mata_pelajaran_ujian_nasional %></td>
+    <td><%= link_to 'Show', daftarformulir %></td>
+    <td><%= link_to 'Edit', edit_daftarformulir_path(daftarformulir) %></td>
+    <td><%= link_to 'Destroy', daftarformulir, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Daftarformulir', new_daftarformulir_path %>

@@ -67,7 +67,8 @@
             </li>
         </ul>              
        
-        <ul class="nav nav-pills pull-right">        
+        <ul class="nav nav-pills pull-right"> 
+                <li> <%= link_to 'Pendaftaran Mahasiswa Baru', new_daftarformulir_path %></li>       
                 <% if user_signed_in? %>
                 
                 <li > <%= link_to current_user.email, root_url %> </li>

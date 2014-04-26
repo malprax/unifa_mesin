@@ -1,0 +1,34 @@
+<%= simple_form_for(@daftarformulir) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%#= f.input :no_pendaftaran %>
+    <%= f.input :nama %>
+    <%= f.input :alamat %>
+    <%= f.input :kode_pos %>
+    <%= f.input :no_hp %>
+    <%= f.input :tempat_lahir %>
+    <%= f.input :tanggal_lahir %>
+    <%= f.input :jenis_kelamin %>
+    <%= f.input :agama %>
+    <%= f.input :suku %>
+    <%= f.input :alamat_tinggal_sekarang %>
+    <%= f.input :nama_lengkap_ayah %>
+    <%= f.input :pekerjaan_ayah %>
+    <%= f.input :alamat_ayah %>
+    <%= f.input :nama_lengkap_ibu %>
+    <%= f.input :pekerjaan_ibu %>
+    <%= f.input :nama_slta %>
+    <%= f.input :kabupaten_slta %>
+    <%= f.input :propinsi_slta %>
+    <%= f.input :jurusan_slta %>
+    <%= f.input :tahun_masuk_slta %>
+    <%= f.input :tahun_lulus_slta %>
+    <%= f.input :total_nilai_ujian_nasional %>
+    <%= f.input :jumlah_mata_pelajaran_ujian_nasional %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Cetak Formulir" %>
+  </div>
+<% end %>
