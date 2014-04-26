@@ -1,7 +1,7 @@
 class DaftarformulirsController < ApplicationController
   # GET /daftarformulirs
   # GET /daftarformulirs.json
-  before_filter :authenticate_user!, except: [:show]
+  before_filter :authenticate_user!, except: [:new, :show]
   def index
     @daftarformulirs = Daftarformulir.all
 
