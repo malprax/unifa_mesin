@@ -46,8 +46,8 @@ Unifa::Application.configure do
     domain: "localhost",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: 'kingmalprax@gmail.com',
-    password: '@1603auRIS'
+    user_name: '',
+    password: ''
   }
   
   
